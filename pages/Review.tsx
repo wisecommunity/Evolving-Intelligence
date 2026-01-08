@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Section } from '../components/Section';
-import { Search, Tag, Clock, ChevronDown, ChevronRight, Filter, X, LayoutGrid, Sparkles, ExternalLink, Loader2, AlertCircle, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Search, Tag, Clock, ChevronDown, ChevronRight, ChevronLeft, Filter, X, LayoutGrid, Sparkles, ExternalLink, Loader2, AlertCircle, ArrowLeft, ArrowRight } from 'lucide-react';
 import { ARTICLE_CATEGORIES } from '../constants';
 import { CategoryNode, Article } from '../types';
 
@@ -201,10 +201,12 @@ interface ArticleDetailProps {
   onCategoryClick: (category: string) => void;
   nextArticle?: Article | null;
   onNextArticle?: () => void;
+  prevArticle?: Article | null;
+  onPrevArticle?: () => void;
 }
 
 // Full Article Detail View
-const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onClose, onCategoryClick, nextArticle, onNextArticle }) => {
+const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onClose, onCategoryClick, nextArticle, onNextArticle, prevArticle, onPrevArticle }) => {
     // Scroll to top when mounted
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -270,25 +272,52 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onClose, onCateg
                         ))}
                     </div>
 
-                    {/* Next Article Navigation */}
-                    {nextArticle && (
-                      <div className="border-t border-dashed border-slate-200 pt-8 flex justify-end">
-                        <button 
-                          onClick={onNextArticle}
-                          className="group text-right max-w-md w-full sm:w-auto"
-                        >
-                          <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 group-hover:text-brand-600 transition-colors flex items-center justify-end">
-                            下一篇 <ArrowRight size={14} className="ml-1" />
-                          </div>
-                          <div className="flex items-center justify-end gap-4">
-                             <div className="text-lg md:text-xl font-bold text-slate-800 group-hover:text-brand-700 transition-colors leading-tight line-clamp-2">
-                               {decodeHtmlEntities(nextArticle.title)}
-                             </div>
-                             <div className="shrink-0 p-3 bg-slate-50 rounded-full group-hover:bg-brand-50 group-hover:text-brand-600 transition-colors">
-                                <ChevronRight size={24} />
-                             </div>
-                          </div>
-                        </button>
+                    {/* Article Navigation (Previous / Next) */}
+                    {(nextArticle || prevArticle) && (
+                      <div className="border-t border-dashed border-slate-200 pt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Previous Article */}
+                        <div className="flex justify-start">
+                          {prevArticle && (
+                              <button 
+                                onClick={onPrevArticle}
+                                className="group text-left w-full sm:w-auto"
+                              >
+                                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 group-hover:text-brand-600 transition-colors flex items-center justify-start">
+                                  <ArrowLeft size={14} className="mr-1" /> 上一篇
+                                </div>
+                                <div className="flex items-center justify-start gap-4">
+                                  <div className="shrink-0 p-3 bg-slate-50 rounded-full group-hover:bg-brand-50 group-hover:text-brand-600 transition-colors">
+                                      <ChevronLeft size={24} />
+                                  </div>
+                                  <div className="text-lg md:text-xl font-bold text-slate-800 group-hover:text-brand-700 transition-colors leading-tight line-clamp-2">
+                                    {decodeHtmlEntities(prevArticle.title)}
+                                  </div>
+                                </div>
+                              </button>
+                          )}
+                        </div>
+
+                        {/* Next Article */}
+                        <div className="flex justify-end">
+                          {nextArticle && (
+                            <button 
+                              onClick={onNextArticle}
+                              className="group text-right w-full sm:w-auto"
+                            >
+                              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 group-hover:text-brand-600 transition-colors flex items-center justify-end">
+                                下一篇 <ArrowRight size={14} className="ml-1" />
+                              </div>
+                              <div className="flex items-center justify-end gap-4">
+                                <div className="text-lg md:text-xl font-bold text-slate-800 group-hover:text-brand-700 transition-colors leading-tight line-clamp-2">
+                                  {decodeHtmlEntities(nextArticle.title)}
+                                </div>
+                                <div className="shrink-0 p-3 bg-slate-50 rounded-full group-hover:bg-brand-50 group-hover:text-brand-600 transition-colors">
+                                    <ChevronRight size={24} />
+                                </div>
+                              </div>
+                            </button>
+                          )}
+                        </div>
                       </div>
                     )}
                 </div>
@@ -469,6 +498,8 @@ export const Review: React.FC = () => {
   if (selectedArticle) {
       // Find the index of current article in the filtered list to determine the next one
       const currentIndex = filteredArticles.findIndex(a => a.id === selectedArticle.id);
+      
+      const prevArticle = currentIndex > 0 ? filteredArticles[currentIndex - 1] : null;
       const nextArticle = currentIndex >= 0 && currentIndex < filteredArticles.length - 1 
           ? filteredArticles[currentIndex + 1] 
           : null;
@@ -502,6 +533,13 @@ export const Review: React.FC = () => {
                 onNextArticle={() => {
                   if (nextArticle) {
                     setSelectedArticle(nextArticle);
+                    window.scrollTo(0, 0);
+                  }
+                }}
+                prevArticle={prevArticle}
+                onPrevArticle={() => {
+                  if (prevArticle) {
+                    setSelectedArticle(prevArticle);
                     window.scrollTo(0, 0);
                   }
                 }}
