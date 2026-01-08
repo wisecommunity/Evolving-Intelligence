@@ -55,7 +55,7 @@ export const LEADERSHIP_SERIES: LeadershipEvent[] = [
     date: "2025年1月23日",
     title: "Better, Simpler Strategy",
     speaker: "Prof. Felix Oberholzer-Gee (HBS)",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop", 
+    image: "https://github.com/wisecommunity/Evolving-Intelligence/blob/main/images/LDS-Felix%20Oberholzer-Gee.JPG", 
     link: "https://leadershipdialogueseries.blogspot.com/2025/01/BetterSimplerStrategy.html",
     status: "completed"
   },
@@ -64,7 +64,7 @@ export const LEADERSHIP_SERIES: LeadershipEvent[] = [
     date: "2025年5月13日",
     title: "財務決策與企業領導力的交匯點",
     speaker: "Prof. Charles C.Y. Wang (HBS)",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop", 
+    image: "https://github.com/wisecommunity/Evolving-Intelligence/blob/main/images/LDS-Charles%20Wang.JPG", 
     link: "https://leadershipdialogueseries.blogspot.com/2025/03/leadership-dialogue-series.html",
     status: "completed"
   },
@@ -83,7 +83,7 @@ export const WORKSHOPS: WorkshopEvent[] = [
     id: "ws-1",
     date: "2025年1月19日",
     title: "Invest in Rest: 壓力調適與有效休息",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+    image: "https://github.com/wisecommunity/Evolving-Intelligence/blob/main/images/Workshop-2025InvestInRest.png",
     details: [
       "壓力調適：認識壓力、覺察身體壓力徵兆、處理壓力源",
       "有效休息：探索 7 種休息類型，找到適合你的方式",
@@ -94,7 +94,7 @@ export const WORKSHOPS: WorkshopEvent[] = [
     id: "ws-2",
     date: "2025年1月22日",
     title: "海外線上座談會",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop",
+    image: "https://github.com/wisecommunity/Evolving-Intelligence/blob/main/images/Workshop-2025%E6%B5%B7%E5%A4%96%E6%A5%AD%E5%B8%AB%E5%BA%A7%E8%AB%87%E6%9C%83.jpg",
     details: [
       "聆聽來自國外的創業、求職及升學實戰挑戰",
       "開拓您的國際視野並掌握實戰秘訣",
@@ -106,7 +106,7 @@ export const WORKSHOPS: WorkshopEvent[] = [
 export const LUNCH_GATHERINGS: LunchGathering = {
   title: "AI無法取代的能力 — 軟實力",
   dates: ["2025年1月24日", "2025年10月4日"],
-  image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop"
+  image: "https://github.com/wisecommunity/Evolving-Intelligence/blob/main/images/LunchEvent2025.jpg"
 };
 
 // Deprecated UPCOMING_EVENTS kept empty or removed in usage, keeping simple exports for others
