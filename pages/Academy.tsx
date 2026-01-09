@@ -65,7 +65,7 @@ export const Academy: React.FC = () => {
         <div className="mt-20 bg-slate-50 p-8 rounded-2xl text-center border border-slate-200">
            <h3 className="text-2xl font-bold text-slate-800 mb-4">核心教學場域</h3>
            <p className="text-slate-600 max-w-3xl mx-auto text-base">
-             自2019年起，於哈佛大學、臺灣大學、北京大學、東華大學、臺北藝術大學與東吳大學，開設「創業家思維」、「多面向思維」、「動態競爭」、「當代藝術創業」、「創新與創業心理」與「全球健康發展政策」學等相關領域的課程
+             自2019年起，於哈佛大學、臺灣大學、北京大學等教學場域，開設「創業家思維」、「多面向思維」、「動態競爭」、「當代藝術創業」、「創新與創業心理」與「全球健康發展政策」學等相關領域的課程
            </p>
         </div>
 
