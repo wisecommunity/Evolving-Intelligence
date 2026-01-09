@@ -15,7 +15,7 @@ export const COURSES: Course[] = [
     code: "ETEPM",
     title: "創業家思維與創業實務管理",
     description: "核心在於「實踐與行動」，協助學員從傳統管理經濟思維轉向創業經濟思維。訓練學員在效果邏輯和因果決策邏輯間靈活切換。",
-    coreConcepts: ["創業家四大志業", "隨堂業師制度", "活體個案教學", "愛拼才會贏互動實踐"],
+    coreConcepts: ["因果和效果邏輯的思維切換", "隨堂業師制度", "活體個案教學", "創業家精神"],
     link: "http://tiny.cc/etepm2025",
     highlight: "從 0 到 1 的創業家思維"
   },
@@ -24,7 +24,7 @@ export const COURSES: Course[] = [
     code: "AI-X-Gs",
     title: "多面向思維：未來領導者的AI與地緣政治思考",
     description: "專為面對 AI 時代與地緣政治變局的未來領導者設計，強調跳脫單一維度，進行螺旋升維。",
-    coreConcepts: ["AI-First 核心", "跨領域整合 (X)", "五大劇場 (Gs): Government, Geopolitics, Generations, Gender, Green", "S.O.F.T. 新世代管理框架"],
+    coreConcepts: ["AI-First 核心", "跨領域整合 (X)", "五大劇場 (Gs): Government, Geopolitics, Generations, Gender, Green", "S.O.F.T. 新世代管理框架","C.L.E.A.R執行框架"],
     link: "http://tiny.cc/aixgs2025",
     highlight: "從 1 到 N 的多面向思維"
   },
