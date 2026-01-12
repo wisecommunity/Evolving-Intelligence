@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
     { name: '首頁', path: '/' },
     { name: '核心哲學', path: '/philosophy' },
     { name: '度化學程', path: '/academy' },
-    { name: '實戰專欄', path: '/review' },
+    { name: '威廉專欄', path: '/review' },
     { name: '演化活動', path: '/events' },    
   ];
 
