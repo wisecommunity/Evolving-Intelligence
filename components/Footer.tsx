@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white">快速連結</h4>
             <ul className="space-y-2 text-base">
               <li><a href="#/academy" className="hover:text-brand-400 transition-colors">度化學程</a></li>
-              <li><a href="#/review" className="hover:text-brand-400 transition-colors">實戰專欄</a></li>
+              <li><a href="#/review" className="hover:text-brand-400 transition-colors">威廉專欄</a></li>
               <li><a href="#/events" className="hover:text-brand-400 transition-colors">演化活動</a></li>
             </ul>
           </div>
