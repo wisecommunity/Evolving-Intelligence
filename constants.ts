@@ -236,8 +236,15 @@ export const ARTICLE_CATEGORIES: CategoryNode[] = [
           { id: "imagery-value", name: "生命的意向價值" },
         ]
       },
-      { id: "tao-te-ching", name: "道德經" },
       { id: "growth-parenting", name: "跟孩子學成長，跟爸媽學成熟" },
+    ]
+  },
+  {
+    id: "chinese-classics-decision",
+    name: "國學決策",
+    children: [
+      { id: "tao-te-ching", name: "道德經" },
+      { id: "zhuangzi", name: "莊子" },
     ]
   },
   {
