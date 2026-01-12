@@ -218,7 +218,7 @@ export const Home: React.FC = () => {
              <div className="w-14 h-14 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center mb-6">
                 <BookOpen size={28} />
              </div>
-             <h3 className="text-2xl font-bold text-slate-900 mb-3">實戰專欄</h3>
+             <h3 className="text-2xl font-bold text-slate-900 mb-3">威廉專欄</h3>
              <h4 className="text-sm font-bold text-blue-600 uppercase tracking-wider mb-4">每日更新 · 眾智共享</h4>
              <p className="text-slate-600 mb-8 leading-relaxed flex-1">
                社群知識的流動中心。透過<span className="font-bold text-slate-800">每日更新</span>的實戰文章，我們剖析時事、分享洞見，與社群成員進行高頻率的思維激盪與對話。
