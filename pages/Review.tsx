@@ -551,7 +551,7 @@ export const Review: React.FC = () => {
   return (
     <div className="pt-20 min-h-screen bg-slate-50">
       <Section 
-        title="實戰專欄 (EIC Review)" 
+        title="威廉專欄 (William on Wisdom)" 
         subtitle="透過度化智能的文章分享交流，達到眾智共享的目的"
         className="pb-8"
       >
